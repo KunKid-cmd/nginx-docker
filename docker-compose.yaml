@@ -1,0 +1,28 @@
+version: '3'
+services:
+  app1:
+    container_name: video-streaming1
+    image: video-streaming:1
+    environment:
+      - APP_NAME=App1
+      - PORT=3000
+    ports:
+      - "3001:3000"
+
+  app2:
+    container_name: video-streaming2
+    image: video-streaming:1
+    environment:
+      - APP_NAME=App2
+      - PORT=3000
+    ports:
+      - "3002:3000"
+
+  app3:
+    container_name: video-streaming3
+    image: video-streaming:1
+    environment:
+      - APP_NAME=App3
+      - PORT=3000
+    ports:
+      - "3003:3000"
